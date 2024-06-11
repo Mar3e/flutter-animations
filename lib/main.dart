@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animations/widgets/cube_animation.dart';
+import 'package:flutter_animations/widgets/custom_animated_container.dart';
 import 'package:flutter_animations/widgets/half_circle_fliping.dart';
 import 'package:flutter_animations/widgets/hero_Animation.dart';
 import 'package:flutter_animations/widgets/rotating_squer.dart';
@@ -45,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
     const HalfCircleFliping(),
     const CubeAnimation(),
     const HeroAnimation(),
+    const CustomAnimatedContainer(),
   ];
 
   void showNextAnimation() {
