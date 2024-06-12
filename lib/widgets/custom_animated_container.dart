@@ -31,8 +31,8 @@ class _CustomAnimatedContainerState extends State<CustomAnimatedContainer> {
             setState(() {
               isZoomed = !isZoomed;
               _width =
-                  isZoomed ? defaultWidth : MediaQuery.of(context).size.width;
-              buttonText = isZoomed ? 'Zoom In' : 'Zoom Out';
+                  isZoomed ? MediaQuery.of(context).size.width : defaultWidth;
+              buttonText = isZoomed ? 'Zoom Out' : 'Zoom In';
               _curve = isZoomed ? Curves.easeInQuint : Curves.bounceIn;
             });
           },
