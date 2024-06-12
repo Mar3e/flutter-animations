@@ -38,6 +38,7 @@ class HeroAnimation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Text("Click on one to see details"),
           const SizedBox(height: 16),

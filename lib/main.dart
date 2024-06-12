@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animations/widgets/animated_color.dart';
 import 'package:flutter_animations/widgets/cube_animation.dart';
 import 'package:flutter_animations/widgets/custom_animated_container.dart';
+import 'package:flutter_animations/widgets/custom_drawer_animation.dart';
+import 'package:flutter_animations/widgets/custom_polygon.dart';
 import 'package:flutter_animations/widgets/half_circle_fliping.dart';
 import 'package:flutter_animations/widgets/hero_Animation.dart';
 import 'package:flutter_animations/widgets/rotating_squer.dart';
@@ -47,6 +50,9 @@ class _MyHomePageState extends State<MyHomePage> {
     const CubeAnimation(),
     const HeroAnimation(),
     const CustomAnimatedContainer(),
+    const AnimatedColor(),
+    const CustomPolygon(),
+    const CustomDrawerAnimation(),
   ];
 
   void showNextAnimation() {
@@ -63,17 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            animationWidgets[index],
-            const SizedBox(height: 200),
-            FilledButton(
-              onPressed: showNextAnimation,
-              child: const Text("Next Animation"),
-            )
-          ],
-        ),
+        child: animationWidgets[index],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: showNextAnimation,
+        child: const Icon(Icons.next_plan),
       ),
     );
   }
