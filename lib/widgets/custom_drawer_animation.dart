@@ -34,8 +34,17 @@ class CustomDrawerAnimation extends StatelessWidget {
                   appBar: AppBar(
                     title: const Text('Drawer'),
                   ),
-                  body: Container(
-                    color: const Color(0x0902A6F1),
+                  body: Center(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          color: const Color(0x0902A6F1),
+                          child: const Text('Swipe right to open the drawer'),
+                        ),
+                        const Icon(Icons.swipe_right)
+                      ],
+                    ),
                   ),
                 ),
               ),
