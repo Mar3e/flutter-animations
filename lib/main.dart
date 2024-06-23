@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animations/widgets/animated_color.dart';
+import 'package:flutter_animations/widgets/animated_prompt.dart';
 import 'package:flutter_animations/widgets/cube_animation.dart';
 import 'package:flutter_animations/widgets/custom_animated_container.dart';
 import 'package:flutter_animations/widgets/custom_drawer_animation.dart';
@@ -53,6 +54,12 @@ class _MyHomePageState extends State<MyHomePage> {
     const AnimatedColor(),
     const CustomPolygon(),
     const CustomDrawerAnimation(),
+    const AnimatedPrompt(
+      title: 'Thank You for your Perches',
+      subTitle: "you delivery will arrive in two businesses days",
+      color: Colors.green,
+      child: Icon(Icons.check),
+    )
   ];
 
   void showNextAnimation() {
